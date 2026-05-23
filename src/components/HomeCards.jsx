@@ -5,12 +5,14 @@ const HomeCards = () => {
     {
       title: "For Developers",
       subtitle: "Browse our react jobs and find your next opportunity.",
-      buttonLabel: "Browse Jobs"
+      buttonLabel: "Browse Jobs",
+      to: "/jobs"
     },
     {
       title: "For Employers",
       subtitle: "Post your job opening and reach thousands of talented developers.",
-      buttonLabel: "Add Job"
+      buttonLabel: "Add Job",
+      to: "/post-job"
     }
   ]
   return (
@@ -21,6 +23,7 @@ const HomeCards = () => {
           title={card.title}
           subtitle={card.subtitle}
           buttonLabel={card.buttonLabel}
+          to={card.to}
         />
       ))}
     </div>

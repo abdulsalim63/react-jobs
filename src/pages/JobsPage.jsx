@@ -3,15 +3,28 @@ import { useState, useEffect } from 'react'
 
 const JobsPage = () => {
   const [allJobs, setAllJobs] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    fetch("http://localhost:8000/jobs?_sort=-datePosted")
-      .then(response => response.json())
-      .then(data => setAllJobs(data))
+    const fetchAllJobs = async () => {
+      try {
+        setTimeout(async () => {
+          const response = await fetch("/api/jobs?_sort=-datePosted")
+          const data = await response.json()
+          setAllJobs(data)
+          setIsLoading(false)
+        }, 500)
+      } catch (error) {
+        console.error("Error fetching all jobs:", error)
+        setIsLoading(false)
+      }
+    }
+
+    fetchAllJobs()
   }, [])
   return (
     <section>
-      <JobListings jobs={allJobs} />
+      <JobListings jobs={allJobs} isLoading={isLoading} />
     </section>
   )
 }
