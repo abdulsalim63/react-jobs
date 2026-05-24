@@ -1,33 +1,37 @@
-import { useState } from 'react'
-import { v4 as uuidv4 } from 'uuid'
-import Spinner from '../components/Spinner'
-import { useNavigate } from 'react-router-dom'
+import { useState } from "react"
+import { useNavigate, useLocation } from "react-router-dom"
+import Spinner from "../components/Spinner"
 
-const PostJobPage = () => {
-  const [type, setJobType] = useState('')
-  const [title, setJobTitle] = useState('')
-  const [description, setDescription] = useState('')
-  const [salary, setSalary] = useState('')
-  const [location, setLocation] = useState('')
-  const [companyName, setCompanyName] = useState('')
-  const [companyDescription, setCompanyDescription] = useState('')
-  const [contactEmail, setContactEmail] = useState('')
-  const [contactPhone, setContactPhone] = useState('')
+const EditJobPage = () => {
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  if (location.state?.data) {
+    console.log(location.state?.data)
+  }
+
+  const [type, setJobType] = useState(location.state?.data?.type)
+  const [title, setJobTitle] = useState(location.state?.data?.title)
+  const [description, setDescription] = useState(location.state?.data?.description)
+  const [salary, setSalary] = useState(location.state?.data?.salary)
+  const [jobLocation, setLocation] = useState(location.state?.data?.location)
+  const [companyName, setCompanyName] = useState(location.state?.data?.company?.name)
+  const [companyDescription, setCompanyDescription] = useState(location.state?.data?.company?.description)
+  const [contactEmail, setContactEmail] = useState(location.state?.data?.company?.contactEmail)
+  const [contactPhone, setContactPhone] = useState(location.state?.data?.company?.contactEmail)
 
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const navigate = useNavigate()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     setIsSubmitting(true)
     e.preventDefault()
     // Here you would typically send the form data to your backend API
     const jobData = {
-      id: uuidv4(), // Generate a unique ID for the job
       type,
       title,
       description,
       salary,
-      location,
+      location: jobLocation,
       datePosted: new Date().toISOString("en-US"),
       company: {
          name: companyName,
@@ -38,49 +42,23 @@ const PostJobPage = () => {
     }
 
     const requestOptions = {
-      method: 'POST',
+      method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(jobData)
     }
 
     setTimeout(() => {
-      fetch('/api/jobs', requestOptions)
+      fetch(`/api/jobs/${location.state?.data?.id}`, requestOptions)
         .then(response => response.json())
         .then(() => {
           console.log('Job Data:', jobData)
           setIsSubmitting(false)
           // Navigate back to the jobs page after successful submission
-          navigate('/jobs', { state: { message: "Job successfully added"}})
+          navigate(`/jobs/${location.state?.data?.id}`, { state: { message: "Job successfully edited"}})
         })
     }, 1000) // Simulate network delay
   }
-
-  const generateRandomJob = () => {
-    const randomJobTypes = ['Full-Time', 'Part-Time', 'Contract', 'Internship']
-    const randomJobTitles = ['Software Engineer', 'Product Manager', 'Data Analyst', 'UX Designer']
-    const randomSalaries = ['0-50k', '50k-60k', '60k-70k', '70k-80k', '80k-90k', '90k-100k', '100k-150k', '150k+']
-    const randomLocations = ['New York, NY', 'San Francisco, CA', 'Austin, TX', 'Remote']
-    const randomCompanyNames = ['Tech Innovators Inc.', 'Creative Solutions LLC', 'Global Enterprises', 'NextGen Software']
-    const randomCompanyDescriptions = [
-      'A leading tech company specializing in innovative solutions.',
-      'A creative agency focused on delivering unique marketing strategies.',
-      'A global corporation with a diverse portfolio of products and services.',
-      'A software development firm dedicated to building cutting-edge applications.'
-    ]
-    const randomContactEmails = ['contact@techinnovators.com', 'contact@creativesolutions.com', 'contact@globalenterprises.com', 'contact@nextgensoftware.com']
-    const randomContactPhones = ['555-555-5555', '555-555-5556', '555-555-5557', '555-555-5558']
-
-    setJobType(randomJobTypes[Math.floor(Math.random() * randomJobTypes.length)])
-    setJobTitle(`${randomJobTitles[Math.floor(Math.random() * randomJobTitles.length)]}`)
-    setDescription(randomCompanyDescriptions[Math.floor(Math.random() * randomCompanyDescriptions.length)])
-    setSalary(randomSalaries[Math.floor(Math.random() * randomSalaries.length)])
-    setLocation(randomLocations[Math.floor(Math.random() * randomLocations.length)])
-    setCompanyName(randomCompanyNames[Math.floor(Math.random() * randomCompanyNames.length)])
-    setCompanyDescription(randomCompanyDescriptions[Math.floor(Math.random() * randomCompanyDescriptions.length)])
-    setContactEmail(randomContactEmails[Math.floor(Math.random() * randomContactEmails.length)])
-    setContactPhone(randomContactPhones[Math.floor(Math.random() * randomContactPhones.length)])
-  }
-
+  
   if (isSubmitting) {
     return (
       <div className="py-8 bg-violet-100 flex justify-center">
@@ -95,10 +73,7 @@ const PostJobPage = () => {
   return (
     <div className="py-8 bg-violet-100 flex justify-center">
       <form className="w-2/3 bg-white p-6 rounded-lg shadow-md flex flex-col gap-6" onSubmit={handleSubmit}>
-        <h1 className="text-2xl font-bold text-gray-700">Post a New Job</h1>
-        <button className="bg-violet-600 hover:bg-violet-700 cursor-pointer shadow-md text-white py-2 px-4 self-start rounded-lg" type="button" onClick={generateRandomJob}>
-          Generate Random Job
-        </button>
+        <h1 className="text-2xl font-bold text-gray-700">Edit Job</h1>
         <div>
           <div className="mb-4 flex flex-col gap-2">
             <label className="text-lg font-semibold">Job Type</label>
@@ -154,7 +129,7 @@ const PostJobPage = () => {
               type="text" 
               className="border border-gray-300 rounded p-2 w-full" 
               required
-              value={location}
+              value={jobLocation}
               onChange={(e) => setLocation(e.target.value)}
             />
           </div>
@@ -204,12 +179,17 @@ const PostJobPage = () => {
             />
           </div>
         </div>
-        <button type="submit" className="bg-violet-600 hover:bg-violet-700 cursor-pointer shadow-md text-white py-2 px-4 rounded-4xl">
-          Post Job
-        </button>
+        <div className="flex flex-row justify-between">
+          <button type="submit" className="bg-green-600 hover:bg-green-700 w-20/41 cursor-pointer shadow-md text-white py-2 px-4 rounded-4xl">
+            Save
+          </button>
+          <button type="button" className="bg-red-600 hover:bg-red-700 w-20/41 cursor-pointer shadow-md text-white py-2 px-4 rounded-4xl" onClick={() => navigate(-1)}>
+            Cancel
+          </button>
+        </div>
       </form>
     </div>
   )
 }
 
-export default PostJobPage
+export default EditJobPage

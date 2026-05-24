@@ -1,13 +1,43 @@
 import { Link, useLoaderData } from "react-router-dom"
 import { FaMapMarker, FaArrowLeft } from 'react-icons/fa'
+import { useNavigate, useLocation } from "react-router-dom"
+import { toast } from "react-toastify"
+import { useEffect } from "react"
 
 const JobPage = () => {
   // const { id } = useParams()
   const job = useLoaderData()
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  const onDelete = () => {
+    if (window.confirm("Are you sure you want to delete this job?")) {
+      fetch(`/api/jobs/${job.id}`, { method: 'DELETE' })
+        .then(() => {
+          // Navigate back to the jobs page after successful deletion
+          navigate('/jobs', { state: { message: "Job successfully deleted" }})
+        })
+        .catch(error => {
+          console.error("Error deleting job:", error)
+          toast.error("Error deleteing job")
+        })
+    }
+  }
+
+  const onEdit = () => {
+    // Navigate to the edit page for this job
+    navigate('/jobs/edit/${job.id}', { state: { data: job }})
+  }
+  
+  useEffect(() => {
+    if (location.state?.message) {
+      toast.success(location.state.message)
+    }
+  }, [location])
 
   return (
     <>
-      <div className="px-8 py-8 bg-white">
+      <div className="px-8 py-4 bg-white">
         <Link to="/jobs" className="text-violet-600 hover:text-violet-800 font-medium">
           <FaArrowLeft className="inline mr-2" />
           Back to Job Listings
@@ -48,10 +78,10 @@ const JobPage = () => {
           <div className="bg-white p-6 rounded-lg shadow-md h-48">
             <h2 className="text-2xl font-bold mb-4">Manage Job</h2>
             <div className="flex flex-col gap-4">
-              <button className="bg-violet-600 hover:bg-violet-700 text-white py-2 px-4 rounded-4xl">
+              <button className="bg-violet-600 hover:bg-violet-700 text-white py-2 px-4 rounded-4xl" onClick={onEdit}>
                 Edit Job
               </button>
-              <button className="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-4xl">
+              <button className="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-4xl" onClick={onDelete}>
                 Delete Job
               </button>
             </div>

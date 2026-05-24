@@ -1,21 +1,6 @@
 {
   "jobs": [
     {
-      "id": "1",
-      "title": "Senior React Developer",
-      "type": "Full-Time",
-      "description": "We are seeking a talented Front-End Developer to join our team in Boston, MA. The ideal candidate will have strong skills in HTML, CSS, and JavaScript, with experience working with modern JavaScript frameworks such as React or Angular.",
-      "location": "Boston, MA",
-      "salary": "$70K - $80K",
-      "datePosted": "2026-05-10",
-      "company": {
-        "name": "NewTek Solutions",
-        "description": "NewTek Solutions is a leading technology company specializing in web development and digital solutions. We pride ourselves on delivering high-quality products and services to our clients while fostering a collaborative and innovative work environment.",
-        "contactEmail": "contact@teksolutions.com",
-        "contactPhone": "555-555-5555"
-      }
-    },
-    {
       "id": "2",
       "title": "Front-End Engineer (React & Redux)",
       "type": "Full-Time",
@@ -89,6 +74,82 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "uJ-M-0epnIs",
+      "type": "Part-Time",
+      "title": "Product Manager",
+      "description": "A creative agency focused on delivering unique marketing strategies.",
+      "salary": "80k-90k",
+      "location": "Remote",
+      "datePosted": "2026-05-24T14:04:18.543Z",
+      "company": {
+        "name": "Creative Solutions LLC",
+        "description": "A leading tech company specializing in innovative solutions.",
+        "contactEmail": "contact@techinnovators.com",
+        "contactPhone": "555-555-5557"
+      }
+    },
+    {
+      "id": "ucTg03ucaSE",
+      "type": "Full-Time",
+      "title": "Software Engineer",
+      "description": "A leading tech company specializing in innovative solutions.",
+      "salary": "90k-100k",
+      "location": "New York, NY",
+      "datePosted": "2026-05-24T14:05:52.504Z",
+      "company": {
+        "name": "Creative Solutions LLC",
+        "description": "A global corporation with a diverse portfolio of products and services.",
+        "contactEmail": "contact@globalenterprises.com",
+        "contactPhone": "555-555-5558"
+      }
+    },
+    {
+      "id": "HakIqmlNwVo",
+      "type": "Contract",
+      "title": "Software Engineer",
+      "description": "A global corporation with a diverse portfolio of products and services.",
+      "salary": "70k-80k",
+      "location": "San Francisco, CA",
+      "datePosted": "2026-05-24T14:41:59.607Z",
+      "company": {
+        "name": "Creative Solutions LLC",
+        "description": "A software development firm dedicated to building cutting-edge applications.",
+        "contactEmail": "contact@techinnovators.com",
+        "contactPhone": "555-555-5556"
+      }
+    },
+    {
+      "id": "NlQNbtJBNwA",
+      "type": "Full-Time",
+      "title": "Data Analyst",
+      "description": "A leading tech company specializing in innovative solutions.",
+      "salary": "90k-100k",
+      "location": "New York, NY",
+      "datePosted": "2026-05-24T15:30:04.395Z",
+      "company": {
+        "name": "Global Enterprises",
+        "description": "A creative agency focused on delivering unique marketing strategies.",
+        "contactEmail": "contact@nextgensoftware.com",
+        "contactPhone": "555-555-5558"
+      }
+    },
+    {
+      "id": "J38Hz39Vlas",
+      "type": "Full-Time",
+      "title": "Software Engineer",
+      "description": "A creative agency focused on delivering unique marketing strategies.",
+      "salary": "70k-80k",
+      "location": "Remote",
+      "datePosted": "2026-05-24T15:30:10.546Z",
+      "company": {
+        "name": "Creative Solutions LLC",
+        "description": "A software development firm dedicated to building cutting-edge applications.",
+        "contactEmail": "contact@nextgensoftware.com",
+        "contactPhone": "555-555-5557"
+      }
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
