@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { FaMapMarker } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { ThemeContext } from "../layouts/MainLayout"
 
 const JobListing = ({ job }) => {
   const [fullDescription, setFullDescription] = useState(false)
+  const { theme, themes } = useContext(ThemeContext)
 
   const timeDiff = Math.abs(new Date() - new Date(job.datePosted))
   const jobPostedDaysAgo = Math.ceil(timeDiff / (1000 * 60 * 60 * 24))
@@ -23,7 +25,7 @@ const JobListing = ({ job }) => {
             <div>
               <h2 className="text-xl font-bold text-gray-800">{job.title}</h2>
               <div className="flex items-center justify-between">
-                <p className="text-amber-700 font-semibold">
+                <p className={`${themes.find(t => t.name === theme).text} font-semibold`}>
                   <FaMapMarker className="inline mr-2" />
                   {job.location}
                 </p>

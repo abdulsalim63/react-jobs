@@ -2,8 +2,12 @@ import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import Spinner from '../components/Spinner'
 import { useNavigate } from 'react-router-dom'
+import { useContext } from "react"
+import { ThemeContext } from "../layouts/MainLayout"
 
 const PostJobPage = () => {
+  const { theme, themes } = useContext(ThemeContext)
+
   const [type, setJobType] = useState('')
   const [title, setJobTitle] = useState('')
   const [description, setDescription] = useState('')
@@ -83,7 +87,7 @@ const PostJobPage = () => {
 
   if (isSubmitting) {
     return (
-      <div className="py-8 bg-violet-100 flex justify-center">
+      <div className={`py-8 ${themes.find(t => t.name === theme).bgLight} flex justify-center`}>
         <div className="w-2/3 bg-white p-6 rounded-lg shadow-md flex flex-col items-center gap-4">
           <h1 className="text-2xl font-bold text-gray-700">Posting Job...</h1>
           <Spinner />
@@ -93,10 +97,10 @@ const PostJobPage = () => {
   }
 
   return (
-    <div className="py-8 bg-violet-100 flex justify-center">
+    <div className={`py-8 ${themes.find(t => t.name === theme).bgLight} flex justify-center`}>
       <form className="w-2/3 bg-white p-6 rounded-lg shadow-md flex flex-col gap-6" onSubmit={handleSubmit}>
-        <h1 className="text-2xl font-bold text-gray-700">Post a New Job</h1>
-        <button className="bg-violet-600 hover:bg-violet-700 cursor-pointer shadow-md text-white py-2 px-4 self-start rounded-lg" type="button" onClick={generateRandomJob}>
+        <h1 className={`text-2xl font-bold ${themes.find(t => t.name === theme).text}`}>Post a New Job</h1>
+        <button className={`${themes.find(t => t.name === theme).dot} ${themes.find(t => t.name === theme).hover} cursor-pointer shadow-md text-white py-2 px-4 self-start rounded-lg`} type="button" onClick={generateRandomJob}>
           Generate Random Job
         </button>
         <div>
@@ -204,7 +208,7 @@ const PostJobPage = () => {
             />
           </div>
         </div>
-        <button type="submit" className="bg-violet-600 hover:bg-violet-700 cursor-pointer shadow-md text-white py-2 px-4 rounded-4xl">
+        <button type="submit" className={`${themes.find(t => t.name === theme).dot} ${themes.find(t => t.name === theme).hover} cursor-pointer shadow-md text-white py-2 px-4 rounded-4xl`}>
           Post Job
         </button>
       </form>

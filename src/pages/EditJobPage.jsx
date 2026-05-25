@@ -1,10 +1,13 @@
 import { useState } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 import Spinner from "../components/Spinner"
+import { useContext } from "react"
+import { ThemeContext } from "../layouts/MainLayout"
 
 const EditJobPage = () => {
   const navigate = useNavigate()
   const location = useLocation()
+  const { theme, themes } = useContext(ThemeContext)
 
   if (location.state?.data) {
     console.log(location.state?.data)
@@ -61,7 +64,7 @@ const EditJobPage = () => {
   
   if (isSubmitting) {
     return (
-      <div className="py-8 bg-violet-100 flex justify-center">
+      <div className={`py-8 ${themes.find(t => t.name === theme).bgLight} flex justify-center`}>
         <div className="w-2/3 bg-white p-6 rounded-lg shadow-md flex flex-col items-center gap-4">
           <h1 className="text-2xl font-bold text-gray-700">Posting Job...</h1>
           <Spinner />
@@ -71,9 +74,9 @@ const EditJobPage = () => {
   }
 
   return (
-    <div className="py-8 bg-violet-100 flex justify-center">
+    <div className={`py-8 ${themes.find(t => t.name === theme).bgLight} flex justify-center`}>
       <form className="w-2/3 bg-white p-6 rounded-lg shadow-md flex flex-col gap-6" onSubmit={handleSubmit}>
-        <h1 className="text-2xl font-bold text-gray-700">Edit Job</h1>
+        <h1 className={`text-2xl font-bold ${themes.find(t => t.name === theme).text}`}>Edit Job</h1>
         <div>
           <div className="mb-4 flex flex-col gap-2">
             <label className="text-lg font-semibold">Job Type</label>

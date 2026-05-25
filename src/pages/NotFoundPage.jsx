@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom'
 import { FaExclamationTriangle, FaArrowLeft } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { ThemeContext } from '../layouts/MainLayout'
 
 const NotFoundPage = () => {
   const navigate = useNavigate()
+  const { theme, themes } = useContext(ThemeContext)
 
   return (
     <div className="p-4 bg-white rounded-lg flex flex-col items-center justify-center">
-      <button className="self-start cursor-pointer text-violet-600 hover:text-violet-800 font-medium" onClick={() => navigate(-1)}>
+      <button className={`self-start cursor-pointer ${themes.find(t => t.name === theme).textLight} ${themes.find(t => t.name === theme).textHover} font-medium`} onClick={() => navigate(-1)}>
         <FaArrowLeft className="inline mr-2" />
         Go Back
       </button>

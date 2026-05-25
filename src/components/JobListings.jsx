@@ -2,9 +2,14 @@ import JobListing from "./JobListing"
 import { useLocation } from "react-router-dom"
 import Spinner from "./Spinner"
 // import { useEffect } from "react"
+import { useContext } from "react"
+import { ThemeContext } from "../layouts/MainLayout"
 
 const JobListings = ({ jobs, isLoading }) => {
   const location = useLocation()
+  const { theme, themes } = useContext(ThemeContext)
+
+  // const [page, setPage] = useState(1
 
   // const handleScroll = (e) => {
   //   const { scrollTop, scrollHeight, clientHeight } = e.currentTarget
@@ -27,8 +32,8 @@ const JobListings = ({ jobs, isLoading }) => {
     
 
   return (
-    <div className="px-4 bg-violet-100 py-8">
-      <h1 className="text-3xl font-bold text-violet-800 text-center">{location.pathname === '/jobs' ? 'Browse Jobs' : 'Recent Jobs'}</h1>
+    <div className={`px-4 ${themes.find(t => t.name === theme).bgLight} py-8`}>
+      <h1 className={`text-3xl font-bold ${themes.find(t => t.name === theme).text} text-center`}>{location.pathname === '/jobs' ? 'Browse Jobs' : 'Recent Jobs'}</h1>
       <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {jobs.map((job) => (
           <JobListing key={job.id} job={job} />

@@ -51,13 +51,13 @@
       "type": "Full-Time",
       "description": "Exciting opportunity for a Full-Time Front-End Developer in bustling Atlanta, GA. We are seeking a talented individual with a passion for building elegant and scalable web applications. Join our team and make an impact!",
       "location": "Atlanta, GA",
-      "salary": "$90K - $100K",
-      "datePosted": "2026-05-19",
+      "salary": "60k-70k",
+      "datePosted": "2026-05-25T01:35:05.364Z",
       "company": {
         "name": "Browning Technologies",
         "description": "Browning Technologies is a rapidly growing technology company specializing in e-commerce solutions. We offer a dynamic and collaborative work environment where employees are encouraged to think creatively and innovate.",
         "contactEmail": "contact@consecteturadipisicing.com",
-        "contactPhone": "555-555-5555"
+        "contactPhone": "contact@consecteturadipisicing.com"
       }
     },
     {
@@ -110,14 +110,14 @@
       "type": "Contract",
       "title": "Software Engineer",
       "description": "A global corporation with a diverse portfolio of products and services.",
-      "salary": "70k-80k",
+      "salary": "150k+",
       "location": "San Francisco, CA",
-      "datePosted": "2026-05-24T14:41:59.607Z",
+      "datePosted": "2026-05-25T01:34:06.302Z",
       "company": {
         "name": "Creative Solutions LLC",
         "description": "A software development firm dedicated to building cutting-edge applications.",
         "contactEmail": "contact@techinnovators.com",
-        "contactPhone": "555-555-5556"
+        "contactPhone": "contact@techinnovators.com"
       }
     },
     {
@@ -136,18 +136,273 @@
       }
     },
     {
-      "id": "J38Hz39Vlas",
-      "type": "Full-Time",
-      "title": "Software Engineer",
-      "description": "A creative agency focused on delivering unique marketing strategies.",
+      "id": "D0ay-RA71QY",
+      "type": "Contract",
+      "title": "Product Manager",
+      "description": "A leading tech company specializing in innovative solutions.",
       "salary": "70k-80k",
       "location": "Remote",
-      "datePosted": "2026-05-24T15:30:10.546Z",
+      "datePosted": "2026-05-24T23:48:51.336Z",
+      "company": {
+        "name": "Global Enterprises",
+        "description": "A leading tech company specializing in innovative solutions.",
+        "contactEmail": "contact@nextgensoftware.com",
+        "contactPhone": "555-555-5556"
+      }
+    },
+    {
+      "id": "4kDpTz8idZo",
+      "type": "Internship",
+      "title": "UX Designer",
+      "description": "A software development firm dedicated to building cutting-edge applications.",
+      "salary": "150k+",
+      "location": "New York, NY",
+      "datePosted": "2026-05-25T01:34:12.781Z",
       "company": {
         "name": "Creative Solutions LLC",
+        "description": "A creative agency focused on delivering unique marketing strategies.",
+        "contactEmail": "contact@globalenterprises.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "sOTjBEEQaBI",
+      "type": "Part-Time",
+      "title": "UX Designer",
+      "description": "A global corporation with a diverse portfolio of products and services.",
+      "salary": "50k-60k",
+      "location": "Austin, TX",
+      "datePosted": "2026-05-25T01:36:57.298Z",
+      "company": {
+        "name": "Tech Innovators Inc.",
+        "description": "A global corporation with a diverse portfolio of products and services.",
+        "contactEmail": "contact@creativesolutions.com",
+        "contactPhone": "contact@creativesolutions.com"
+      }
+    },
+    {
+      "id": "J0Xnx5mIASY",
+      "type": "Part-Time",
+      "title": "UX Designer",
+      "description": "A global corporation with a diverse portfolio of products and services.",
+      "salary": "70k-80k",
+      "location": "New York, NY",
+      "datePosted": "2026-05-25T01:35:29.098Z",
+      "company": {
+        "name": "Global Enterprises",
+        "description": "A software development firm dedicated to building cutting-edge applications.",
+        "contactEmail": "contact@globalenterprises.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "7CGIQq2jp9M",
+      "type": "Contract",
+      "title": "Data Analyst",
+      "description": "A global corporation with a diverse portfolio of products and services.",
+      "salary": "150k+",
+      "location": "New York, NY",
+      "datePosted": "2026-05-25T01:42:49.864Z",
+      "company": {
+        "name": "NextGen Software",
+        "description": "A software development firm dedicated to building cutting-edge applications.",
+        "contactEmail": "contact@creativesolutions.com",
+        "contactPhone": "contact@creativesolutions.com"
+      }
+    },
+    {
+      "id": "0pCnc3WIlXQ",
+      "type": "Contract",
+      "title": "Data Analyst",
+      "description": "A creative agency focused on delivering unique marketing strategies.",
+      "salary": "60k-70k",
+      "location": "Remote",
+      "datePosted": "2026-05-25T01:41:22.898Z",
+      "company": {
+        "name": "NextGen Software",
+        "description": "A creative agency focused on delivering unique marketing strategies.",
+        "contactEmail": "contact@globalenterprises.com",
+        "contactPhone": "contact@globalenterprises.com"
+      }
+    },
+    {
+      "id": "ZKsAW20ec9I",
+      "type": "Full-Time",
+      "title": "UX Designer",
+      "description": "A leading tech company specializing in innovative solutions.",
+      "salary": "90k-100k",
+      "location": "New York, NY",
+      "datePosted": "2026-05-25T01:43:38.378Z",
+      "company": {
+        "name": "Creative Solutions LLC",
+        "description": "A global corporation with a diverse portfolio of products and services.",
+        "contactEmail": "contact@techinnovators.com",
+        "contactPhone": "contact@techinnovators.com"
+      }
+    },
+    {
+      "id": "qCDSm9lo_gM",
+      "type": "Full-Time",
+      "title": "Software Engineer",
+      "description": "A global corporation with a diverse portfolio of products and services.",
+      "salary": "60k-70k",
+      "location": "Austin, TX",
+      "datePosted": "2026-05-25T01:43:55.345Z",
+      "company": {
+        "name": "Tech Innovators Inc.",
+        "description": "A creative agency focused on delivering unique marketing strategies.",
+        "contactEmail": "contact@nextgensoftware.com",
+        "contactPhone": "contact@nextgensoftware.com"
+      }
+    },
+    {
+      "id": "2Zv_xorfl_o",
+      "type": "Part-Time",
+      "title": "Product Manager",
+      "description": "A software development firm dedicated to building cutting-edge applications.",
+      "salary": "100k-150k",
+      "location": "New York, NY",
+      "datePosted": "2026-05-25T01:43:43.946Z",
+      "company": {
+        "name": "Global Enterprises",
+        "description": "A global corporation with a diverse portfolio of products and services.",
+        "contactEmail": "contact@globalenterprises.com",
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "3UX6vhcKEpo",
+      "type": "Full-Time",
+      "title": "UX Designer",
+      "description": "A global corporation with a diverse portfolio of products and services.",
+      "salary": "100k-150k",
+      "location": "Remote",
+      "datePosted": "2026-05-25T01:44:04.363Z",
+      "company": {
+        "name": "NextGen Software",
+        "description": "A software development firm dedicated to building cutting-edge applications.",
+        "contactEmail": "contact@creativesolutions.com",
+        "contactPhone": "555-555-5556"
+      }
+    },
+    {
+      "id": "aoxDWIxxBmU",
+      "type": "Internship",
+      "title": "Software Engineer",
+      "description": "A leading tech company specializing in innovative solutions.",
+      "salary": "90k-100k",
+      "location": "Remote",
+      "datePosted": "2026-05-25T08:02:54.045Z",
+      "company": {
+        "name": "Creative Solutions LLC",
+        "description": "A global corporation with a diverse portfolio of products and services.",
+        "contactEmail": "contact@techinnovators.com",
+        "contactPhone": "555-555-5558"
+      }
+    },
+    {
+      "id": "42_pwCPAL-I",
+      "type": "Internship",
+      "title": "UX Designer",
+      "description": "A leading tech company specializing in innovative solutions.",
+      "salary": "0-50k",
+      "location": "San Francisco, CA",
+      "datePosted": "2026-05-25T08:03:11.795Z",
+      "company": {
+        "name": "Tech Innovators Inc.",
+        "description": "A creative agency focused on delivering unique marketing strategies.",
+        "contactEmail": "contact@globalenterprises.com",
+        "contactPhone": "555-555-5556"
+      }
+    },
+    {
+      "id": "BZiUwXFZmQQ",
+      "type": "Full-Time",
+      "title": "Product Manager",
+      "description": "A global corporation with a diverse portfolio of products and services.",
+      "salary": "0-50k",
+      "location": "Remote",
+      "datePosted": "2026-05-25T08:03:36.360Z",
+      "company": {
+        "name": "Global Enterprises",
+        "description": "A leading tech company specializing in innovative solutions.",
+        "contactEmail": "contact@techinnovators.com",
+        "contactPhone": "555-555-5558"
+      }
+    },
+    {
+      "id": "XZIUfbBbHTI",
+      "type": "Contract",
+      "title": "Data Analyst",
+      "description": "A creative agency focused on delivering unique marketing strategies.",
+      "salary": "60k-70k",
+      "location": "Austin, TX",
+      "datePosted": "2026-05-25T08:04:39.843Z",
+      "company": {
+        "name": "Tech Innovators Inc.",
+        "description": "A software development firm dedicated to building cutting-edge applications.",
+        "contactEmail": "contact@techinnovators.com",
+        "contactPhone": "555-555-5556"
+      }
+    },
+    {
+      "id": "zUNPP3f2A6I",
+      "type": "Full-Time",
+      "title": "Product Manager",
+      "description": "A creative agency focused on delivering unique marketing strategies.",
+      "salary": "150k+",
+      "location": "New York, NY",
+      "datePosted": "2026-05-25T08:05:10.225Z",
+      "company": {
+        "name": "Tech Innovators Inc.",
+        "description": "A leading tech company specializing in innovative solutions.",
+        "contactEmail": "contact@techinnovators.com",
+        "contactPhone": "555-555-5556"
+      }
+    },
+    {
+      "id": "RsJIbhcJfT8",
+      "type": "Contract",
+      "title": "Data Analyst",
+      "description": "A global corporation with a diverse portfolio of products and services.",
+      "salary": "100k-150k",
+      "location": "New York, NY",
+      "datePosted": "2026-05-25T08:06:55.914Z",
+      "company": {
+        "name": "Tech Innovators Inc.",
         "description": "A software development firm dedicated to building cutting-edge applications.",
         "contactEmail": "contact@nextgensoftware.com",
-        "contactPhone": "555-555-5557"
+        "contactPhone": "555-555-5555"
+      }
+    },
+    {
+      "id": "ftkb1XzFvw8",
+      "type": "Internship",
+      "title": "Software Engineer",
+      "description": "A creative agency focused on delivering unique marketing strategies.",
+      "salary": "100k-150k",
+      "location": "New York, NY",
+      "datePosted": "2026-05-25T08:08:05.878Z",
+      "company": {
+        "name": "NextGen Software",
+        "description": "A software development firm dedicated to building cutting-edge applications.",
+        "contactEmail": "contact@globalenterprises.com",
+        "contactPhone": "555-555-5558"
+      }
+    },
+    {
+      "id": "oMziLK-34-4",
+      "type": "Part-Time",
+      "title": "Product Manager",
+      "description": "A global corporation with a diverse portfolio of products and services.",
+      "salary": "70k-80k",
+      "location": "Austin, TX",
+      "datePosted": "2026-05-25T08:11:09.196Z",
+      "company": {
+        "name": "Creative Solutions LLC",
+        "description": "A leading tech company specializing in innovative solutions.",
+        "contactEmail": "contact@globalenterprises.com",
+        "contactPhone": "contact@globalenterprises.com"
       }
     }
   ],
