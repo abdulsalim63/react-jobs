@@ -15,10 +15,17 @@ const themes = [
 ]
 
 const MainLayout = () => {
-  const [theme, setTheme] = useState("Violet")
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'Violet'  // read on init
+  })
+
+  const handleSetTheme = (newTheme) => {
+  setTheme(newTheme)
+  localStorage.setItem('theme', newTheme)  // save on change
+}
 
   return (
-    <ThemeContext value={{ theme, themes, setTheme }}>
+    <ThemeContext value={{ theme, themes, setTheme: handleSetTheme }}>
       <Navbar />
       <Outlet />
       <Footer />

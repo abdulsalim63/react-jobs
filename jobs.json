@@ -404,6 +404,21 @@
         "contactEmail": "contact@globalenterprises.com",
         "contactPhone": "contact@globalenterprises.com"
       }
+    },
+    {
+      "id": "QOcYgG4Abyw",
+      "type": "Contract",
+      "title": "Product Manager",
+      "description": "A leading tech company specializing in innovative solutions.",
+      "salary": "150k+",
+      "location": "San Francisco, CA",
+      "datePosted": "2026-05-25T08:49:12.073Z",
+      "company": {
+        "name": "Creative Solutions LLC",
+        "description": "A software development firm dedicated to building cutting-edge applications.",
+        "contactEmail": "contact@techinnovators.com",
+        "contactPhone": "contact@techinnovators.com"
+      }
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
